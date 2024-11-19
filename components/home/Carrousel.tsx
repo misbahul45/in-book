@@ -7,7 +7,6 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import Image from "next/image";
 
 const Carrousel = () => {
 
