@@ -9,19 +9,16 @@ export const getUser = async (id: string) => {
         where: { id }
     })
     if (!user) {
-        return null // Return null instead of throwing an error
+        return null;
     }
     return user
 }
 
-// Create or Update User
 export const creatingUser = async (data: UserSchema.CreateUserSchema) => {
     try {
-        // Check if the user already exists
         const existingUser = await getUser(data.id)
 
         if (!existingUser) {
-            // Create new user if it doesn't exist
             const newUser = await prisma.user.create({
                 data: {
                     id: data.id,

@@ -13,7 +13,7 @@ const page = async({params:{action}}:Props) => {
     const {userId}=await auth()
     const user=await getUser(userId as string)
     if(user?.id && action==='create'){
-        return redirect('/');
+        redirect('/');
     }
   return (
     <div className='flex md:flex-row flex-col w-full min-h-screen'>
