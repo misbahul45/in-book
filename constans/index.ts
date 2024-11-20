@@ -48,4 +48,19 @@ export const NAVBAR_LINK=[
     href:"/genre",
   }
 ]
+
+
+export const TAGS_INBOOK = [
+  { id: 1, tag: "Pemberdayaan Digital" },
+  { id: 2, tag: "Mahasiswa Melek Teknologi" },
+  { id: 3, tag: "Pembelajaran Masa Depan" },
+  { id: 4, tag: "Revolusi Literasi Digital" },
+  { id: 5, tag: "E-Learning untuk Semua" },
+  { id: 6, tag: "Keterampilan Digital Tumbuh" },
+  { id: 7, tag: "Pertumbuhan Berbasis Teknologi" },
+  { id: 8, tag: "Inovasi Lewat Pendidikan" },
+  { id: 9, tag: "Alat Pembelajaran Cerdas" },
+  { id: 10, tag: "Keterampilan Digital Generasi Berikutnya" }
+];
+
   

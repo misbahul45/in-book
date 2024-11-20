@@ -4,11 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../ui/button'
-import { SignOutButton, useAuth } from '@clerk/nextjs'
+import { SignOutButton } from '@clerk/nextjs'
+import { useLayoutStore } from './LayoutProvider'
 
 const Navbar = () => {
-    const { userId } = useAuth()
-    const Render=!userId?
+    const { user }=useLayoutStore((state)=>state)
+    const Render=!user?.id?
        <>
             <Link href={'/sign-in'} className='px-6 py-2 bg-cyan-500 rounded-lg text-white hover:bg-cyan-400 transition-all duration-100'>
                 <p className='text-white font-bold text-sm'>Sign In</p>
