@@ -6,14 +6,22 @@ import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
 import { LoaderIcon } from 'lucide-react'
+import ImageProfile from './ImageProfile'
 
 const FormCreate = () => {
+    const [avater, setAvater] = React.useState('')
     const [loading, setLoading] = React.useState(false)
     const form=useForm()
 
+    const onSubmit = (data:{ }) => {
+        setLoading(true)
+        console.log(data)
+    }
+
   return (
     <Form {...form}>
-        <form className="w-full space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
+            <ImageProfile image={avater} setImage={setAvater} />
             <FormField
                 control={form.control}
                 name="username"

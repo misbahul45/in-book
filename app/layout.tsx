@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import LayoutProvider from "@/components/layout/LayoutProvider";
 import UserData from "@/components/layout/UserData";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100`}
           >
             <UserData />
+            <Toaster position="bottom-right" />
             <Navbar />
             {children}
           </body>

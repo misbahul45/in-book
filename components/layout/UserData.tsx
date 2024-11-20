@@ -1,6 +1,6 @@
 'use client'
 import { useAuth } from '@clerk/nextjs'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLayoutStore } from './LayoutProvider'
 import { useRouter } from 'next/navigation'
 
