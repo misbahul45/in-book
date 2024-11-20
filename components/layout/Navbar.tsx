@@ -8,7 +8,7 @@ import { SignOutButton } from '@clerk/nextjs'
 import { useLayoutStore } from './LayoutProvider'
 
 const Navbar = () => {
-    const { user } = useLayoutStore((state) => state)
+    const { user, setUser } = useLayoutStore((state) => state)
 
     const [scroll, setScroll] = React.useState(false)
     const [lastScrollY, setLastScrollY] = React.useState(0)
@@ -36,12 +36,20 @@ const Navbar = () => {
         if(scroll){
             setTimeout(() => {
                 setScroll(false)
-            }, 1000);
+            }, 2000);
         }
     }, [scroll])
 
+    const Signout = () => {
+        setUser({
+            id: '',
+            name: '',
+            avatar: '',
+        })
+    }
+
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 flex justify-center items-center py-4 ${scroll ? "translate-y-0" : "-translate-y-20"} transition-all duration-300`}>
+        <header className={`fixed top-0 left-0 w-full z-50 flex justify-center items-center py-4 ${scroll ? "translate-y-0" : "-translate-y-20 hover:translate-y-0"} transition-all duration-300`}>
             <nav className='flex gap-3 items-center bg-slate-800/70 backdrop-blur-md px-6 py-1.5 rounded-xl'>
                 <Link href={'/'} className='mr-4'>
                     <Image src={'/images/logo.jpg'} alt='logo' width={50} height={50} className='size-9 bg-cover rounded-full' />
@@ -65,7 +73,7 @@ const Navbar = () => {
                         </>
                     ) : (
                         <SignOutButton>
-                            <Button variant={'destructive'}>Signout</Button>
+                            <Button onClick={Signout} variant={'destructive'}>Signout</Button>
                         </SignOutButton>
                     )}
                 </div>

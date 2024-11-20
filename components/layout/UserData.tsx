@@ -17,7 +17,7 @@ const UserData = () => {
   
     useEffect(() => {
       if (userId && !user) {
-        router.push('/create')
+        router.push('/user/create')
       }
     }, [user, userId, router])
   
