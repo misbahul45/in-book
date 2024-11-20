@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <div>
         <div className="text-center my-8">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
                 🚀 Our <span className="text-blue-600">Goals</span>
             </h1>
             <p className="text-lg sm:text-xl text-blue-500">
@@ -18,12 +18,12 @@ const AboutSection = () => {
                 {GOALS.map((goal) => (
                     <div
                     key={goal.id}
-                    className="md:w-96 md:h-64 w-80 h-56 mx-2 bg-blue-900 shadow-lg rounded-lg p-6 hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
+                    className="px-4 py-2 mx-2 bg-slate-600 shadow-lg rounded-lg p-6 hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
                     >
                     <h3 className="md:text-xl text-lg font-bold text-center text-slate-100 mb-3 mx-6">
                         {goal.title}
                     </h3>
-                    <p className="text-gray-100 text-center md:text-lg text-md">{goal.description}</p>
+                    <p className="text-gray-100 text-center text-sm">{goal.description}</p>
                     </div>
                 ))}
             </Marquee>

@@ -12,7 +12,7 @@ const Carrousel = () => {
 
 
   return (
-    <Carousel className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-lg shadow-lg bg-gradient-to-r my-8 from-blue-500 to-indigo-600 p-4">
+    <Carousel className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-lg shadow-lg bg-gradient-to-r my-8 from-slate-500 to-gray-600 p-4">
         <div className="text-center py-8 text-white">
             <h1 className="text-2xl sm:text-5xl font-extrabold mb-4">
             🌟 Tingkatkan Diri Melalui <span className="underline decoration-yellow-400">Literasi Digital</span>
@@ -28,7 +28,7 @@ const Carrousel = () => {
                     key={index}
                     className="relative w-full max-w-4xl h-full flex items-center justify-center"
                 >
-                    <div className="relative w-full h-96 rounded-lg overflow-hidden bg-blue-800 flex items-center justify-center">
+                    <div className="relative w-full h-96 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
                         <span className="text-2xl font-bold text-white">
                             Poster Literasi {index + 1}
                         </span>
